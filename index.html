@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <header>Weather Dashboard</header>
+    </div>
+
+    <div class="main-container">
+      <div class="sidebar">
+        <div class="searchbar">
+          <h1>Search for a City</h1>
+          <input type="text" id="cityInput" />
+          <button onclick="searchCity(event)" id="searchBtn" class="btn">
+            Search</button
+          ><br />
+          <span style="display: none" id="errorMsg"
+            >Please enter a valid city name!</span
+          >
+        </div>
+        <section class="ajax-section">
+          <div class="container">
+            <ul class="items-list" id="citiesList"></ul>
+          </div>
+        </section>
+      </div>
+      <div class="content-container" style="display: none">
+        <div class="current-weather">
+          <h1>
+            <span id="current_city"></span>
+            (<span id="current_date"></span>)
+            <img
+              style="vertical-align: middle"
+              id="current_weather_img"
+              src=""
+              alt=""
+            />
+          </h1>
+          <h3>Temp: <span id="current_temperature"></span> F</h3>
+          <h3>Wind: <span id="current_wind"></span> MPH</h3>
+          <h3>Humidity: <span id="current_humidity"></span> %</h3>
+          <h3>
+            UV Index: <span class="uv-index" id="current_uv_index"></span>
+          </h3>
+        </div>
+        <div class="five-days">
+          <h2>5-Days Forecast:</h2>
+          <ul class="weather-list" id="weather-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
